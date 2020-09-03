@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+
+        <script src="~/Scripts/jquery-3.4.1.js"></script>
+
+    </head>
+    <body>
+
+        <input id="accept" type="checkbox"  value="data" name="bigo" /> Kabul ediyorum
+        <br/>
+        <input id="birkan" type="submit" disabled name="bigo" value="Gönder" />
+
+        <script>
+            $('#accept').click(function () {
+                if ($('#birkan').is(':disabled')) {
+                    $('#birkan').removeAttr('disabled');
+                }
+                else {
+                    $('#birkan').attr('disabled', '');
+                }
+            });
+        </script>
+
+
+        
+    </body>
+    </html>
